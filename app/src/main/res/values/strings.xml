@@ -1,3 +1,4 @@
 <resources>
+    <string name="hello_text">Hello World From String</string>
     <string name="app_name">learn_compose</string>
 </resources>
