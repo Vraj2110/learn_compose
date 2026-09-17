@@ -29,15 +29,17 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun ModifierExample() {
     Column(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
             .background(color = Color.Red)
             .padding(vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
 
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .background(color = Color.Cyan)
                 .padding(all = 8.dp),
             horizontalArrangement = Arrangement.SpaceAround
@@ -50,24 +52,30 @@ verticalArrangement = Arrangement.spacedBy(16.dp)
 
         Box(
             modifier = Modifier
-                .background(color = Color.Blue ,
-                    shape = RoundedCornerShape(16.dp))
-                     .size(200.dp)
-                .clickable( onClick = { })
-                .border(5.dp, Color.White, shape =RectangleShape ),
+                .background(
+                    color = Color.Blue,
+                    shape = RoundedCornerShape(16.dp)
+                )
+                .size(200.dp)
+                .clickable(onClick = { })
+                .border(
+                    5.dp, Color.White,
+                    shape = RectangleShape
+                ),
             contentAlignment = Alignment.Center
 
-        ){
+        ) {
             Text(text = "Center", fontSize = 20.sp, color = Color.White)
         }
 
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .background(color = Color.Magenta)
-                .padding(all =8.dp),
+                .padding(all = 8.dp),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
-            Text(text = "One", fontSize = 20.sp,)
+            Text(text = "One", fontSize = 20.sp)
             Text(text = "Two", fontSize = 20.sp)
             Text(text = "Three", fontSize = 20.sp)
 
