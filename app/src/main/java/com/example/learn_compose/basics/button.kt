@@ -18,6 +18,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -85,14 +86,16 @@ fun Buttonexample() {
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
+
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     var userName by remember { mutableStateOf("") }
-    var email  by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
     Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -103,17 +106,17 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
         OutlinedTextField(
             value = userName,
-            onValueChange = { userName = it},
+            onValueChange = { userName = it },
             modifier = Modifier.fillMaxWidth(),
-            label = {Text(text = "User Name")}
+            label = { Text(text = "User Name") }
         )
         Spacer(modifier = modifier.height(13.dp))
 
         OutlinedTextField(
             value = email,
-            onValueChange = { email = it},
+            onValueChange = { email = it },
             modifier = Modifier.fillMaxWidth(),
-            label = {Text(text = "Email")}
+            label = { Text(text = "Email") }
         )
         Spacer(modifier = modifier.height(20.dp))
         Button(
@@ -138,4 +141,29 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         }
 
     }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun outlinebuttonexample() {
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        OutlinedButton(
+            onClick = { },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.outlinedButtonColors(
+                contentColor = Color.Black,
+                containerColor = Color.Red
+            )
+        ) {
+            Text("Click me")
+        }
+    }
+
 }
