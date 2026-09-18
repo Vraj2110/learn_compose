@@ -20,6 +20,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
+import com.example.learn_compose.basics.Buttonexample
+import com.example.learn_compose.basics.LoginScreen
 import com.example.learn_compose.ui.theme.Learn_composeTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,34 +30,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Learn_composeTheme {
-                    Greeting()
+                LoginScreen()
                 }
             }
         }
     }
-
-@Composable
-fun Greeting() {
-    val context = LocalContext.current
-    val clickOnText = {}
-        Text(text= "hello world",
-            color = Color.Blue  ,
-            fontSize = 32.sp,
-            fontStyle = FontStyle.Italic,
-            modifier = Modifier.padding(22.dp).background(Color.Black).clickable{
-                Toast.makeText(
-                    context,
-                    "done",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Learn_composeTheme {
-        Greeting()
-    }
-}
