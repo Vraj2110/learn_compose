@@ -22,6 +22,9 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import com.example.learn_compose.basics.Buttonexample
 import com.example.learn_compose.basics.LoginScreen
+import com.example.learn_compose.basics.RememberSaveableExample
+import com.example.learn_compose.basics.StateHostingExample
+import com.example.learn_compose.basics.StateManagementexample
 import com.example.learn_compose.ui.theme.Learn_composeTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,7 +33,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Learn_composeTheme {
-                LoginScreen()
+                StateHostingExample()
                 }
             }
         }
