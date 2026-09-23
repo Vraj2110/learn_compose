@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
+import com.example.learn_compose.basics.AlertDialogExample
 import com.example.learn_compose.basics.Buttonexample
 import com.example.learn_compose.basics.LoginScreen
 import com.example.learn_compose.basics.RememberSaveableExample
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Learn_composeTheme {
-                StateHostingExample()
+                AlertDialogExample()
                 }
             }
         }
