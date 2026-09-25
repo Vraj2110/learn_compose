@@ -25,10 +25,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 
-@Preview(showBackground = true, showSystemUi = true)
+
 @Composable
-fun LoginScreenui() {
+fun LoginScreenui(navController: NavController) {
 
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -76,7 +78,7 @@ fun LoginScreenui() {
         Spacer(modifier = Modifier.height(12.dp))
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate(mynavroutes.HomeScreen)},
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp),
